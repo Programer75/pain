@@ -1,11 +1,17 @@
 body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-image: url('../images/wallpaper-img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  color: #f0f0f1;
 }
 header {
   width: 100%;
-  height: 120px;
+  height: 70px;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -22,8 +28,19 @@ header .sidebar {
   width: 400px;
   justify-content: space-between;
 }
+header .sidebar .search {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
 header .sidebar .search input {
-  display: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 40px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+header .side-menu {
+  line-height: 40px;
 }
 .horizontal-menu {
   display: flex;
@@ -70,7 +87,7 @@ main .controls {
   justify-content: space-between;
 }
 .card-photo {
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.2);
   height: 80%;
   border-radius: 12px;
   position: relative;
@@ -84,7 +101,7 @@ main .controls {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #f0f0f1;
 }
 .card-count {
   display: flex;
@@ -93,11 +110,15 @@ a {
 .card-count .line {
   height: 1px;
   width: 80px;
-  background-color: #1e2022;
+  background-color: #f0f0f1;
   margin: 0px 6px;
 }
 .btn-rounded {
+  color: #f0f0f1;
   border-radius: 50%;
   height: 40px;
   width: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  backdrop-filter: blur(1px);
 }
