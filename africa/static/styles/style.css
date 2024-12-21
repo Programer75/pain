@@ -1,5 +1,44 @@
+@font-face {
+  font-family: 'Menlo';
+  src: url('../fonts/Menlo/Menlo-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Menlo';
+  src: url('../fonts/Menlo/Menlo-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Menlo';
+  src: url('../fonts/Menlo/Menlo-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Menlo';
+  src: url('../fonts/Menlo/Menlo-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve/Involve-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve/Involve-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve/Involve-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Involve';
+  src: url('../fonts/Involve/Involve-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: url('../images/wallpaper-img.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,6 +49,7 @@ body {
   color: #f0f0f1;
 }
 header {
+  font-family: 'Involve';
   width: 100%;
   height: 70px;
   position: fixed;
@@ -51,7 +91,8 @@ header .side-menu {
   margin-right: 26px;
 }
 main {
-  width: 1200px;
+  font-family: 'Involve';
+  width: 90%;
   margin: 0 auto;
   position: relative;
   top: 120px;
@@ -62,7 +103,26 @@ main {
 main article {
   width: 500px;
   float: left;
+  margin-right: 30px;
   margin-left: 10px;
+  margin-top: -90px;
+}
+main article h1 {
+  font-size: 60px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+main article button {
+  font-family: 'Involve';
+  font-weight: bold;
+  font-size: 15px;
+  height: 45px;
+  width: 210px;
+  border-radius: 15px;
+  background-color: rgba(95, 51, 17, 0.7);
+  border-color: transparent;
+  backdrop-filter: blur(1px);
+  color: #f0f0f1;
 }
 main .gallery-cards {
   height: 100%;
@@ -78,40 +138,66 @@ main .gallery-cards .gallery .card {
   margin-right: 30px;
   width: 250px;
 }
-main .gallery-cards .gallery .card:not(:first-child) {
-  transform: scale(0.9);
+main .gallery-cards .gallery .card h4 {
+  font-size: 17px;
+  margin-bottom: 0px;
 }
-main .controls {
-  width: 80%;
-  display: flex;
+main .gallery-cards .gallery .card .card-description .rating {
+  height: 20px;
+  width: 80px;
+  display: inline-flex;
   justify-content: space-between;
 }
-.card-photo {
+main .gallery-cards .gallery .card .card-description .rating .rating-round {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+main .gallery-cards .gallery .card .card-description .rating .fill {
+  background-color: white;
+}
+main .gallery-cards .gallery .card .card-photo {
   background-color: rgba(255, 255, 255, 0.2);
   height: 80%;
   border-radius: 12px;
   position: relative;
 }
-.fav {
+main .gallery-cards .gallery .card .card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+main .gallery-cards .gallery .card .card-photo .fav {
   position: absolute;
   right: 15px;
   top: 15px;
-  background-image: url(../images/button.jpg);
+  background-image: url(../images/fav-btn.png);
   background-size: contain;
 }
-a {
-  text-decoration: none;
-  color: #f0f0f1;
+main .gallery-cards .gallery .card:not(:first-child) {
+  transform: scale(0.9);
 }
-.card-count {
+main .controls {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+main .controls .card-count {
   display: flex;
   align-items: center;
 }
-.card-count .line {
+main .controls .card-count .line {
   height: 1px;
   width: 80px;
   background-color: #f0f0f1;
   margin: 0px 6px;
+}
+a {
+  text-decoration: none;
+  color: #f0f0f1;
 }
 .btn-rounded {
   color: #f0f0f1;
@@ -121,4 +207,8 @@ a {
   background: rgba(255, 255, 255, 0.2);
   border-color: transparent;
   backdrop-filter: blur(1px);
+}
+ion-icon {
+  font-size: 25px;
+  font-weight: bold;
 }
